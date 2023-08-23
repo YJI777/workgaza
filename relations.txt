@@ -1,0 +1,51 @@
+workgaza
+MultiAuth -> Admin, User, Company
+users, admins, companies
+
+1)users
+id | name | email | password | phone | address | image | bio | company_id
+
+2)admins
+id | name | email | password | role_id
+
+3)companies
+id | name | email | password | phone | location | image | bio
+
+4)categories
+id | name
+
+5)skills
+id | name
+
+6)projects
+id | name | image | content | price | status | category_id | company_id | date
+
+7)project_skill
+project_id | skill_id
+
+8)user_skill *
+user_id | skill_id
+
+9)proposals
+id | user_id | project_id | content | price | duration | date
+
+10)user_projects
+id | project_id | price | duration | status
+
+11)reviews
+id | company_id | user_project_id | quality | speed | communication
+
+12)company_reviews
+id | user_id | company_id | star | comment
+
+13)payments
+id | user_project_id | price | commission | transaction_id
+
+14)roles
+id | name
+
+15)permissions
+id | name | code
+
+16)permission_role
+permission_id | role_id
